@@ -13,7 +13,7 @@ class Validate:
 # -----------------------------
 
 
-class email:
+class Email:
     email: str
     var1: str
     var2: str
