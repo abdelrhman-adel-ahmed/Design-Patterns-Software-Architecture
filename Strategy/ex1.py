@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 
-# sperate the behaviour from implemintation
-# strategy pattern
+# sperate behaviour from implementation
 
 
 class FlyBehavior(ABC):
