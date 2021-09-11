@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-# sperate behaviour from implementation
+# sperate behaviour from implementation,take the part that vary and create an interface for it ,favor composistion over inheritance 
 
 
 class FlyBehavior(ABC):
