@@ -1,7 +1,6 @@
 from subject import Subject
 
 
-# this version have diffrent observer types that can happen
 class Course(Subject):
     def __init__(self, name, availability="unknown", max_student=2):
         self.name = name
@@ -12,7 +11,7 @@ class Course(Subject):
         self.current_num_student = 0
 
     def subscribe(self, Observer):
-        """add observer to observers_list"""
+        """add observer to observers_list if we can"""
         if self.current_num_student >= self.max_student:
             self.waiting_list.append(Observer)
             return
@@ -20,7 +19,7 @@ class Course(Subject):
         self.current_num_student += 1
 
     def unsubscribe(self, Observer):
-        """remove the observer from the observers list"""
+        """remove the observer from the observers list and if any observer is waiting put it in the observer list and notify"""
         self.observers_list.remove(Observer)
         if self.waiting_list:
             waiting_observer = self.waiting_list.pop()
